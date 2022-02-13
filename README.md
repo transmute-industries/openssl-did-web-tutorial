@@ -1,12 +1,20 @@
-## Open SSL DID Web Tutorial
+# Open SSL DID Web Tutorial
 
-This repo provides an educational example only, and should not be relied on in
+This repository provides an educational example for how to generate keys
+for use with `did:web` in a manner that aims to be consistent with existing best
+practices for handing public key generation and use of 
+[X.509](https://datatracker.ietf.org/doc/html/rfc5280) certificates to handle
+such use cases as certificate chains and revocation.
+
+### Disclaimer
+The contents of this repository are educational only, and should not be relied on in
 production.
 
 Nothing in this guide should be mistaken for security or legal advice, and the
 reader is advised to read further about these topics and consult security
 experts and legal counsel regarding the latest case law and best practices.
 
+## Intro and Example
 When working with [Decentralized Identifiers](https://www.w3.org/TR/did-core/)
 and [Verifiable Credentials](https://www.w3.org/TR/vc-data-model/) a natural
 question that arises is how do these standards relate to
@@ -29,8 +37,8 @@ however we are assuming a centralized scenario because we are assuming the need
 for backwards compatibility with traditional PKI.
 
 This leaves us with only a few options, of which [DID
-Web](https://w3c-ccg.github.io/did-method-web/) is the most practical choice as
-of 2022.
+Web](https://w3c-ccg.github.io/did-method-web/) is the most practical choice at
+the time that this document was last updated.
 
 Let use assume we will use DID Web for issuer identifiers, we must now refine
 the format of the identifier further.
@@ -156,6 +164,8 @@ In order to make this clearer lets look at a full example.
 
 ### User Stories
 
+Example did:web document:
+
 ```json
 {
   "@context": [
@@ -226,11 +236,19 @@ openssl verify -CAfile ./root-ca/certs/ca.crt ./root-ca/certs/ca.crt
 ```
 
 At the time of writing this tutorial, there is no "standard" recommended way for
-embedding this CA chain in a did document.
+embedding this CA chain in a did document, though embedding the whole chain
+may not be desireable, as in doing so, a situation is created where the
+CA chain from the document might be used for verification, rather than the 
+core operating system managed CA chain which sees updates to revocation 
+based on system updates.  That type of situation could allow verification
+based on a revoked certificate which could be quite problematic.
 
 We recommend not including this chain in the did web document, and instead,
 making it available to verifiers via an approach similar to the one taken by
-Apple and Google for Android and iOS.
+Apple and Google for Android and iOS.  n.b. may core intermediate and root 
+certificates are already present on both commonly deployed operating systems 
+and browsers and as a result, you may not need to take additional action to 
+deploy intermediate certificates.
 
 #### Hardware Isolation & Supply Chain Considerations
 
@@ -242,12 +260,16 @@ and [threat model](https://en.wikipedia.org/wiki/Threat_model).
 
 It is recommended that the Root CA be
 [air-gapped](<https://en.wikipedia.org/wiki/Air_gap_(networking)>), and that the
-intermediate CA key ceremonies occur in a
-[SCIF](https://en.wikipedia.org/wiki/Sensitive_compartmented_information_facility)
-or similarly secure location.
+intermediate CA key ceremonies occur in an environment that suitable to the desired
+security level.  
 
-Depending on the sensitivity, the intermediate and child key ceremonies should
-also occur in a SCIF.
+If conducting a key ceremony that is generating key material
+or certificates for use on the open web, it should be assumed that key generation
+will occur in a safe environment, and that private key material will not be 
+accessed outside of use of an [HSM](https://en.wikipedia.org/wiki/Hardware_security_module) 
+meeting the appropriate security level for the desired deployment environment, 
+e.g. [FIPS 140-3](https://csrc.nist.gov/publications/detail/fips/140/3/final)  
+
 
 Because this process of securing a CA Chain is not new, we will direct readers
 to the following references for further details.
@@ -272,7 +294,7 @@ understand their relationship to traditional PKI systems such as
 [X.509](https://en.wikipedia.org/wiki/X.509) and
 [OpenSSL](https://github.com/openssl/openssl).
 
-Because these standards are many years apart from eachother, there is often more
+Because these standards are many years apart from each other, there is often more
 than one way that they can be used together, additionally the cryptographic and
 legal building blocks associated with their successful operation may have
 changed since the time the standard was published.
