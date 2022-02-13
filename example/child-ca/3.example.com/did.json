@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
+  "id": "did:web:3.example.com",
+  "verificationMethod": [
+    {
+      "id": "did:web:3.example.com#z82Lm1u2T3nSa8fdMvHX18STwgPr2f4zB57poWXBfgSEYxSpRZ4t5eL2CdTs1yVAJ5nEcVH",
+      "type": "JsonWebKey2020",
+      "controller": "did:web:3.example.com",
+      "publicKeyJwk": {
+        "kty": "EC",
+        "crv": "P-384",
+        "x": "ozVbURBFMovhLp93PIsMXM04vGE-i-docqI1_R1leWOPWMaefV-fkbSn6oQDPs1s",
+        "y": "0L8J4VpJuU5gKm6fsBvRpd_uIrLqjp1oMwB-9xc4Sc3qleRtPbl1aInJSN9jw2zL"
+      }
+    }
+  ],
+  "assertionMethod": [
+    "did:web:3.example.com#z82Lm1u2T3nSa8fdMvHX18STwgPr2f4zB57poWXBfgSEYxSpRZ4t5eL2CdTs1yVAJ5nEcVH"
+  ],
+  "authentication": [
+    "did:web:3.example.com#z82Lm1u2T3nSa8fdMvHX18STwgPr2f4zB57poWXBfgSEYxSpRZ4t5eL2CdTs1yVAJ5nEcVH"
+  ]
+}

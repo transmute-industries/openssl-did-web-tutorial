@@ -1,0 +1,1 @@
+openssl x509 -text -in child-ca/1.crt 

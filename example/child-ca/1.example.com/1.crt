@@ -1,0 +1,40 @@
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number: 4097 (0x1001)
+        Signature Algorithm: ecdsa-with-SHA256
+        Issuer: CN=Interm.
+        Validity
+            Not Before: Feb 13 16:25:10 2022 GMT
+            Not After : Feb 13 16:25:10 2023 GMT
+        Subject: CN=1.example.com
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (384 bit)
+                pub:
+                    04:4c:50:6d:8e:91:45:7d:aa:87:8d:4c:1e:65:8b:
+                    17:d2:86:1d:54:1e:f5:a4:0f:dd:e8:2e:f6:76:3e:
+                    e6:f8:f1:42:db:a7:f6:21:2f:80:2d:29:00:a0:94:
+                    91:56:fd:82:f0:46:02:db:b0:1a:1b:05:1e:ed:01:
+                    b8:fc:c6:61:9c:59:bb:25:b7:9c:14:35:e8:fe:a6:
+                    60:f8:38:67:93:e0:43:68:ab:24:6d:ac:fa:4d:ce:
+                    50:03:68:53:8d:02:5c
+                ASN1 OID: secp384r1
+                NIST CURVE: P-384
+    Signature Algorithm: ecdsa-with-SHA256
+         30:64:02:30:57:67:2b:16:1b:5a:d7:d4:6a:fd:3f:f2:73:1f:
+         39:90:12:69:3a:10:48:4f:47:15:36:25:c6:44:93:82:ec:ed:
+         9d:c8:65:52:2b:c9:d6:80:82:88:2a:6a:a1:a2:4d:63:02:30:
+         0a:83:e6:41:ba:57:d6:db:dc:da:60:b2:fd:a5:69:8e:c1:b6:
+         ea:76:4f:cf:f7:4f:70:51:4a:80:5f:d9:e9:e3:8c:ae:1e:b9:
+         05:a7:8d:26:38:b3:b2:01:cd:c7:5b:77
+-----BEGIN CERTIFICATE-----
+MIIBTjCB1gICEAEwCgYIKoZIzj0EAwIwEjEQMA4GA1UEAwwHSW50ZXJtLjAeFw0y
+MjAyMTMxNjI1MTBaFw0yMzAyMTMxNjI1MTBaMBgxFjAUBgNVBAMMDTEuZXhhbXBs
+ZS5jb20wdjAQBgcqhkjOPQIBBgUrgQQAIgNiAARMUG2OkUV9qoeNTB5lixfShh1U
+HvWkD93oLvZ2Pub48ULbp/YhL4AtKQCglJFW/YLwRgLbsBobBR7tAbj8xmGcWbsl
+t5wUNej+pmD4OGeT4ENoqyRtrPpNzlADaFONAlwwCgYIKoZIzj0EAwIDZwAwZAIw
+V2crFhta19Rq/T/ycx85kBJpOhBIT0cVNiXGRJOC7O2dyGVSK8nWgIKIKmqhok1j
+AjAKg+ZBulfW29zaYLL9pWmOwbbqdk/P909wUUqAX9np44yuHrkFp40mOLOyAc3H
+W3c=
+-----END CERTIFICATE-----

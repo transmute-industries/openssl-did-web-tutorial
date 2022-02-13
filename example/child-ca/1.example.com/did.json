@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
+  "id": "did:web:1.example.com",
+  "verificationMethod": [
+    {
+      "id": "did:web:1.example.com#z82LkoKVLUUigxZckvRRUGCWjsusxrN44xkpZCBDXDTHusQ2o1HCr7XF5AoX2YXQAP9TUxq",
+      "type": "JsonWebKey2020",
+      "controller": "did:web:1.example.com",
+      "publicKeyJwk": {
+        "kty": "EC",
+        "crv": "P-384",
+        "x": "TFBtjpFFfaqHjUweZYsX0oYdVB71pA_d6C72dj7m-PFC26f2IS-ALSkAoJSRVv2C",
+        "y": "8EYC27AaGwUe7QG4_MZhnFm7JbecFDXo_qZg-Dhnk-BDaKskbaz6Tc5QA2hTjQJc"
+      }
+    }
+  ],
+  "assertionMethod": [
+    "did:web:1.example.com#z82LkoKVLUUigxZckvRRUGCWjsusxrN44xkpZCBDXDTHusQ2o1HCr7XF5AoX2YXQAP9TUxq"
+  ],
+  "authentication": [
+    "did:web:1.example.com#z82LkoKVLUUigxZckvRRUGCWjsusxrN44xkpZCBDXDTHusQ2o1HCr7XF5AoX2YXQAP9TUxq"
+  ]
+}

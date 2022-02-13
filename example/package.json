@@ -1,0 +1,16 @@
+{
+  "name": "jose-x5c",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Orie Steele",
+  "license": "ISC",
+  "dependencies": {
+    "@transmute/web-crypto-key-pair": "^0.7.0-unstable.47",
+    "fs-extra": "^10.0.0",
+    "jose": "^4.5.0"
+  }
+}
