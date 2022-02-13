@@ -260,8 +260,8 @@ and [threat model](https://en.wikipedia.org/wiki/Threat_model).
 
 It is recommended that the Root CA be
 [air-gapped](<https://en.wikipedia.org/wiki/Air_gap_(networking)>), and that the
-intermediate CA key ceremonies occur in an environment that suitable to the desired
-security level.  
+intermediate CA key ceremonies occur in an environment that is suitable to the desired
+security level for the intended deployment environment.  
 
 If conducting a key ceremony that is generating key material
 or certificates for use on the open web, it should be assumed that key generation
