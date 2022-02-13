@@ -263,35 +263,6 @@ that all private keys remain uncompromised, meaning that the verifier believes
 that only authorized personal have access to the raw private key or its signing
 capabilities in the case of hardware isolation.
 
-#### Addressing Coercion
-
-The trust model for Certificate Authorities, Decentralized Identifiers and
-Verifiable Credentials is built on the assumption that private keys are only
-used to identify a single entity, and that only that entity has the ability to
-leverage them to produce signatures.
-
-In addition to considering cases where this entitiy may have been compromised
-unwittingly, we must also consider that such entities may be wittingly
-compromised through coercion.
-
-In such cases, some security community members have recommended the use of a
-[Warrant canary](https://en.wikipedia.org/wiki/Warrant_canary), while others
-recommend strongly against such approaches.
-
-Learn more about [Canary
-Watch](https://www.eff.org/deeplinks/2016/05/canary-watch-one-year-later).
-
-Another related topic is the use of a [Duress
-code](https://en.wikipedia.org/wiki/Duress_code).
-
-It is worth noting that while traditional DPKI trust factors work well when
-there is no requirement or utility for deception, there are legitimate scenarios
-where deception may be required, and such infrastructure may be unsuitable for
-those scenarios.
-
-Carefully consider "internet recommendations" regarding this topic, and be sure
-to consult security experts and legal counsel before taking any action.
-
 ### Conclusion
 
 If you are an organization or person interested in applying [Decentralized
