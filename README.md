@@ -104,7 +104,7 @@ registering device bound keys to a verification relationship for a more
 decentralized DID Method, such as ION or ELEM.
 
 Let's assume that we trust the certificates associated with
-[Apple](https://www.apple.com/certificateauthority/private/) and
+- [Apple](https://www.apple.com/certificateauthority/private/) and
 [Android](https://android.googlesource.com/platform/system/ca-certificates/+/master/files/).
 
 Let's also assume that we trust the root CA and intermediate CAs associated with
