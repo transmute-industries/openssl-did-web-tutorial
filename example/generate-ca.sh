@@ -60,10 +60,12 @@ openssl ecparam -genkey -name secp384r1 -out intermediate-ca/private/intermediat
 openssl req -config intermediate-ca/openssl.conf -sha256 -new -key intermediate-ca/private/intermediate-ca.key -out intermediate-ca/certs/intermediate-ca.csr -subj '/CN=Interm.'
 openssl ca -batch -config root-ca/openssl.conf -keyfile root-ca/private/ca.key -cert root-ca/certs/ca.crt -extensions v3_req -notext -md sha256 -in intermediate-ca/certs/intermediate-ca.csr -out intermediate-ca/certs/intermediate-ca.crt
 
-mkdir child-ca
+mkdir child-ca > /dev/null 2>&1
 
 for I in `seq 1 3` ; do
   openssl ecparam -out child-ca/$I.key -name secp384r1 -genkey
   openssl req -new -nodes -key child-ca/$I.key -outform pem -out child-ca/$I.request -sha384 -subj "/CN=$I.example.com" 
   openssl ca -batch -config root-ca/openssl.conf -keyfile intermediate-ca/private/intermediate-ca.key -cert intermediate-ca/certs/intermediate-ca.crt -out child-ca/$I.crt -infiles child-ca/$I.request
 done
+
+exit 0
