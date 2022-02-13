@@ -105,7 +105,7 @@ decentralized DID Method, such as ION or ELEM.
 
 Let's assume that we trust the certificates associated with
 - [Apple](https://www.apple.com/certificateauthority/private/) and
-[Android](https://android.googlesource.com/platform/system/ca-certificates/+/master/files/).
+- [Android](https://android.googlesource.com/platform/system/ca-certificates/+/master/files/).
 
 Let's also assume that we trust the root CA and intermediate CAs associated with
 the web origin's CA chain we need to establish trust in `1.example.com`.
