@@ -239,16 +239,16 @@ At the time of writing this tutorial, there is no "standard" recommended way for
 embedding this CA chain in a did document, though embedding the whole chain
 may not be desireable, as in doing so, a situation is created where the
 CA chain from the document might be used for verification, rather than the 
-core operating system managed CA chain which sees updates to revocation 
-based on system updates.  That type of situation could allow verification
+core operating system managed CA chain (which sees updates to revocation 
+based on system updates).  That type of situation could allow verification
 based on a revoked certificate which could be quite problematic.
 
 We recommend not including this chain in the did web document, and instead,
 making it available to verifiers via an approach similar to the one taken by
-Apple and Google for Android and iOS.  n.b. may core intermediate and root 
-certificates are already present on both commonly deployed operating systems 
-and browsers and as a result, you may not need to take additional action to 
-deploy intermediate certificates.
+Apple and Google for Android and iOS.  
+n.b. many core intermediate and root certificates are already present on both 
+commonly deployed operating systems and browsers and as a result, you may not 
+need to take additional action to deploy intermediate certificates.
 
 #### Hardware Isolation & Supply Chain Considerations
 
