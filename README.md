@@ -36,9 +36,9 @@ In a decentralized scenario, we might pick a DID Method like ION, ELEM or INDY,
 however we are assuming a centralized scenario because we are assuming the need
 for backwards compatibility with traditional PKI.
 
-This leaves us with only a few options, of which [DID
-Web](https://w3c-ccg.github.io/did-method-web/) is the most practical choice at
-the time that this document was last updated.
+This leaves us with only a few options, of which 
+[DID Web](https://w3c-ccg.github.io/did-method-web/) 
+is the most practical choice at the time that this document was last updated.
 
 Let use assume we will use DID Web for issuer identifiers, we must now refine
 the format of the identifier further.
@@ -65,19 +65,16 @@ issuer credentials.
 
 ### How will we establish trust in the issuer & holder?
 
-In traditional PKI systems, we rely on a centralized [Certificate
-Authority](https://en.wikipedia.org/wiki/Certificate_authority) to establish
-trust.
+In traditional PKI systems, we rely on a centralized 
+[Certificate Authority](https://en.wikipedia.org/wiki/Certificate_authority) 
+to establish trust.
 
 If you would like to learn more about software / hardware supply chain attacks,
 here are some references:
 
-- [Solar Winds
-  2021](https://www.businessinsider.com/solarwinds-hack-explained-government-agencies-cyber-security-2020-12)
-- [Elemental / Super Micro Computer Inc.
-  2018](https://www.bloomberg.com/news/features/2018-10-04/the-big-hack-how-china-used-a-tiny-chip-to-infiltrate-america-s-top-companies)
-- [Comodo
-  2011](https://www.eff.org/deeplinks/2011/03/iranian-hackers-obtain-fraudulent-https)
+- [Solar Winds 2021](https://www.businessinsider.com/solarwinds-hack-explained-government-agencies-cyber-security-2020-12)
+- [Elemental / Super Micro Computer Inc.2018](https://www.bloomberg.com/news/features/2018-10-04/the-big-hack-how-china-used-a-tiny-chip-to-infiltrate-america-s-top-companies)
+- [Comodo 2011](https://www.eff.org/deeplinks/2011/03/iranian-hackers-obtain-fraudulent-https)
 
 For the sake of our example we will consider 3 factors in establishing trust in
 the issuer.
@@ -98,10 +95,8 @@ also have "mobile device" side considerations.
 
 See also:
 
-- [Android Key
-  Attestations](https://developer.android.com/training/articles/security-key-attestation)
-- [Apple Secure
-  Enclave](https://developer.apple.com/documentation/security/certificate_key_and_trust_services/keys/storing_keys_in_the_secure_enclave)
+- [Android Key Attestations](https://developer.android.com/training/articles/security-key-attestation)
+- [Apple Secure Enclave](https://developer.apple.com/documentation/security/certificate_key_and_trust_services/keys/storing_keys_in_the_secure_enclave)
 
 If you are interested in device bound keys and Decentralized Identifiers, you
 may want to consider [did:key](https://did.key.transmute.industries/), or
@@ -141,8 +136,7 @@ root-ca/
 │  │  ├─ 3.example.com
 ```
 
-Each `child-ca` is really a web origin, and has a corresponding [DID
-Document](https://www.w3.org/TR/did-core/#core-properties).
+Each `child-ca` is really a web origin, and has a corresponding [DID Document](https://www.w3.org/TR/did-core/#core-properties).
 
 This document contains the keys that are "authoritative" for the identifier and
 its various verification relationships.
@@ -157,8 +151,7 @@ presentations.
 These relationships correspond to the 2 roles in the verifiable credentials
 specification, `issuer` and `holder`.
 
-See [VC Data Model Life Cycle
-Details](https://www.w3.org/TR/vc-data-model/#lifecycle-details).
+See [VC Data Model Life Cycle Details](https://www.w3.org/TR/vc-data-model/#lifecycle-details).
 
 In order to make this clearer lets look at a full example.
 
@@ -275,10 +268,8 @@ Because this process of securing a CA Chain is not new, we will direct readers
 to the following references for further details.
 
 - [Key Ceremony](https://en.wikipedia.org/wiki/Key_ceremony)
-- [NSA KEY MANAGEMENT REQUIREMENTS ANNEX V2.0
-  2021](<https://www.nsa.gov/portals/75/documents/resources/everyone/csfc/capability-packages/(U)%20Key%20Management%20Requirements%20Annex%20v2_0.pdf?ver=aInoh9AdFRsDsNa2yjgTRg%3D%3D>)
-- [digi-sign key
-  ceremony](https://www.digi-sign.com/compliance/key%20ceremony/index)
+- [NSA KEY MANAGEMENT REQUIREMENTS ANNEX V2.0 2021](<https://www.nsa.gov/portals/75/documents/resources/everyone/csfc/capability-packages/(U)%20Key%20Management%20Requirements%20Annex%20v2_0.pdf?ver=aInoh9AdFRsDsNa2yjgTRg%3D%3D>)
+- [digi-sign key ceremony](https://www.digi-sign.com/compliance/key%20ceremony/index)
 
 Regardless of the threat environment, a `verifier` or `relying-party` MUST trust
 that all private keys remain uncompromised, meaning that the verifier believes
@@ -287,10 +278,10 @@ capabilities in the case of hardware isolation.
 
 ### Conclusion
 
-If you are an organization or person interested in applying [Decentralized
-Identifiers](https://www.w3.org/TR/did-core/) and [Verifiable
-Credentials](https://www.w3.org/TR/vc-data-model/), it is recommended that you
-understand their relationship to traditional PKI systems such as
+If you are an organization or person interested in applying 
+[Decentralized Identifiers](https://www.w3.org/TR/did-core/) and 
+[Verifiable Credentials](https://www.w3.org/TR/vc-data-model/), 
+it is recommended that you understand their relationship to traditional PKI systems such as
 [X.509](https://en.wikipedia.org/wiki/X.509) and
 [OpenSSL](https://github.com/openssl/openssl).
 
@@ -306,7 +297,5 @@ You may wish to consult:
 
 - [CFRG](https://datatracker.ietf.org/rg/cfrg/documents/)
 - [NIST](https://www.nist.gov/)
-- [UN Committee of Experts on Big Data and Data Science for Official
-  Statistics](https://unstats.un.org/bigdata/task-teams/privacy)
-- [UN Office of
-  Counter-Terrorism](https://www.un.org/counterterrorism/cybersecurity)
+- [UN Committee of Experts on Big Data and Data Science for Official Statistics](https://unstats.un.org/bigdata/task-teams/privacy)
+- [UN Office of Counter-Terrorism](https://www.un.org/counterterrorism/cybersecurity)
