@@ -1,0 +1,13 @@
+{
+  "jwt": "eyJhbGciOiJFUzM4NCJ9.eyJoZWxsbyI6IndvcmxkIiwiaWF0IjoxNjQ0ODg3MzIzLCJpc3MiOiJ1cm46ZXhhbXBsZTppc3N1ZXIiLCJhdWQiOiJ1cm46ZXhhbXBsZTphdWRpZW5jZSIsImV4cCI6MTY0NDg5NDUyM30.U6m_ovL3rXW2agUhtmCnf2Jz6XVsBxscECVCgqtiwzFqS76v5kkh23nk-T72rmdjvIS9I1wgYBCNwS3sAdLTj1h_TFtGrz6lTKy5Q-9QH13_2SDsFL_h3yZSnluEUCTe",
+  "protectedHeader": {
+    "alg": "ES384"
+  },
+  "payload": {
+    "hello": "world",
+    "iat": 1644887323,
+    "iss": "urn:example:issuer",
+    "aud": "urn:example:audience",
+    "exp": 1644894523
+  }
+}

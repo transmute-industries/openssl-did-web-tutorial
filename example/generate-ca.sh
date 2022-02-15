@@ -63,7 +63,8 @@ openssl ca -batch -config root-ca/openssl.conf -keyfile root-ca/private/ca.key -
 mkdir child-ca > /dev/null 2>&1
 
 for I in `seq 1 3` ; do
-  openssl ecparam -out child-ca/$I.key -name secp384r1 -genkey
+  openssl ecparam -out child-ca/$I.key -name secp384r1 -genkey 
+  openssl pkcs8 -topk8 -inform pem -in child-ca/$I.key -outform pem -nocrypt -out child-ca/$I.pem
   openssl req -new -nodes -key child-ca/$I.key -outform pem -out child-ca/$I.request -sha384 -subj "/CN=$I.example.com" 
   openssl ca -batch -config root-ca/openssl.conf -keyfile intermediate-ca/private/intermediate-ca.key -cert intermediate-ca/certs/intermediate-ca.crt -out child-ca/$I.crt -infiles child-ca/$I.request
 done
